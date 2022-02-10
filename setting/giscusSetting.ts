@@ -1,10 +1,10 @@
 const giscus = {
     enabled: true,
-    repo: "Tualin14/OneSS",
-    repo_id: "R_kgDOGe5t-w",
+    repo: "skyworldp/OneSS",
+    repo_id: "R_kgDOG0nZOg",
     category: "Announcements",
-    category_id: "DIC_kwDOGe5t-84CA65K",
-    term: "Welcome to OneSS!"
+    category_id: "DIC_kwDOG0nZOs4CBGa0",
+    term: "any"
 }
 
 export default giscus
