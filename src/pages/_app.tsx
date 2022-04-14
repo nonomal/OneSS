@@ -1,14 +1,15 @@
 import '@/styles/globals.css'
 import type {AppProps} from 'next/app'
 import Head from "next/head";
+import {SessionProvider} from "next-auth/react"
 
 import CopyDialog from "@/components/CopyModal/CopyDialog";
 import customSetting from "@/setting/customSetting";
 
 
-export default function MyApp({Component, pageProps}: AppProps,) {
+export default function MyApp({Component, pageProps: {session, ...pageProps}}: AppProps,) {
     return (
-        <>
+        <SessionProvider session={session}>
             <Head>
                 <title>{customSetting.siteName}</title>
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
@@ -24,6 +25,6 @@ export default function MyApp({Component, pageProps}: AppProps,) {
             <Component {...pageProps}/>
 
             <CopyDialog/>
-        </>
+        </SessionProvider>
     );
 }

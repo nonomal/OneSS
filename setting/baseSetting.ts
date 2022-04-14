@@ -1,5 +1,6 @@
 const baseSetting = {
     folder: "/OneSS",
+    private_folder:"/OneSSP",
     authorization: {
         client_id: process.env.CLIENT_ID!,
         scope: "https://graph.microsoft.com/.default",
