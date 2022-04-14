@@ -31,12 +31,6 @@ export default function Menu({userName}: { userName: string }) {
                 <Auth/>
 
                 <ThemeSwitch/>
-
-                <a href={customSetting.link.github} target={'_blank'} rel="noreferrer">
-                    <button className={"btn btn-ghost"}>
-                        <VscGithub className={"w-6 h-6"}/>
-                    </button>
-                </a>
             </div>
         </div>
     )

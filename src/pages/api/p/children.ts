@@ -8,8 +8,7 @@ import baseSetting from "@/setting/baseSetting";
 
 const children = async (req: NextApiRequest, res: NextApiResponse) => {
     const session = await getSession({req})
-    console.log(session)
-    if (session) {
+    if (session?.user?.name === 'admin') {
         const {user, route} = req.query
         const data = await getChildrenByRoute(user as string, route ? `/${route}` : '')
         res.status(200).json(data)

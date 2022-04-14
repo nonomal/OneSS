@@ -2,7 +2,7 @@ import {useRouter} from 'next/router'
 
 import Menu from "@/components/Menu/Menu";
 import userList from "@/setting/userList";
-import PrivateItemList from "@/components/ItemList/PrivateItemList";
+import PrivateItemList from "@/components/ItemList/p/PrivateItemList";
 
 
 export default function UserIndex() {
