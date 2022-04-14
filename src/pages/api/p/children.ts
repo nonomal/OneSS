@@ -4,11 +4,12 @@ import {getSession} from "next-auth/react"
 
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
+import customSetting from "@/setting/customSetting";
 
 
 const children = async (req: NextApiRequest, res: NextApiResponse) => {
     const session = await getSession({req})
-    if (session?.user?.name === 'admin') {
+    if (session?.user?.name === customSetting.siteName && session?.user?.email === customSetting.link.email) {
         const {user, route} = req.query
         const data = await getChildrenByRoute(user as string, route ? `/${route}` : '')
         res.status(200).json(data)

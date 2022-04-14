@@ -1,10 +1,9 @@
 import Link from "next/link";
 
-import {VscGistSecret, VscGithub, VscHome} from "react-icons/vsc";
+import {VscGistSecret, VscHome} from "react-icons/vsc";
 
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import customSetting from "@/setting/customSetting";
 import Auth from "@/components/Auth";
 import userList from "@/setting/userList";
 

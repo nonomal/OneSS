@@ -7,10 +7,8 @@ const customSetting = {
     },
     link: {
         github: 'https://github.com/Tualin14/OneSS',
-        mail: {
-            enable: true,
-            link: 't@dzaaaaaa.com'
-        },
+        email: 't@dzaaaaaa.com',
+
         twitter: {
             enable: true,
             link: 'https://twitter.com/OliviaiDT'
