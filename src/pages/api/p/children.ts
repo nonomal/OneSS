@@ -14,7 +14,7 @@ const children = async (req: NextApiRequest, res: NextApiResponse) => {
         const data = await getChildrenByRoute(user as string, route ? `/${route}` : '')
         res.status(200).json(data)
     } else {
-        res.redirect(307, '/404')
+        res.status(200).json({status: 233})
     }
 }
 export default children
