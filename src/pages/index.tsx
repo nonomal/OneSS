@@ -7,6 +7,7 @@ import customSetting from "@/setting/customSetting";
 import userList from "@/setting/userList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import IndexLink from "@/components/IndexLink";
+import Auth from "@/components/Auth";
 
 
 export default function Home() {
@@ -46,6 +47,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="flex-none">
+                        <Auth/>
                         <ThemeSwitch/>
                         <a href={customSetting.link.github} target={'_blank'} rel="noreferrer">
                             <button className={"btn btn-ghost"}>

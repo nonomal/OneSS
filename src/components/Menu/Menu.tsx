@@ -5,6 +5,7 @@ import {VscGithub, VscHome} from "react-icons/vsc";
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import customSetting from "@/setting/customSetting";
+import Auth from "@/components/Auth";
 
 
 export default function Menu({userName}: { userName: string }) {
@@ -19,6 +20,8 @@ export default function Menu({userName}: { userName: string }) {
                         <VscHome className={"w-6 h-6"}/>
                     </button>
                 </a></Link>
+
+                <Auth/>
 
                 <ThemeSwitch/>
 
