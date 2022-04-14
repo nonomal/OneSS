@@ -1,23 +1,12 @@
 import NextAuth from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials";
-import privateSecret from "@/setting/privateSecret";
+import GitHubProvider from "next-auth/providers/github";
+import baseSetting from "@/setting/baseSetting";
 
 export default NextAuth({
     providers: [
-        CredentialsProvider({
-            name: " Account",
-            credentials: {
-                password: {label: "Password", type: "password"},
-            },
-            async authorize(credentials, {body}) {
-                const user = {name: 'admin'}
-
-                if (body && body.password === privateSecret.token) {
-                    return user
-                } else {
-                    return null
-                }
-            },
-        }),
+        GitHubProvider({
+            clientId: baseSetting.github.clientId,
+            clientSecret: baseSetting.github.clientSecret
+        })
     ]
 })
