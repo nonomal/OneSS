@@ -4,7 +4,7 @@ import {VscGistSecret, VscHome} from "react-icons/vsc";
 
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import Auth from "@/components/Auth";
+import Auth from "@/components/Menu/Auth";
 import userList from "@/setting/userList";
 
 

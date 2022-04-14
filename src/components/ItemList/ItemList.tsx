@@ -8,10 +8,11 @@ import FileItem from "@/components/ItemList/FileItem";
 import ListHeader from "@/components/ItemList/ListHeader";
 import Quota from "@/components/ItemList/Quota";
 import ListLoading from "@/components/ItemList/ListLoading";
+import NextLink from "@/components/ItemList/NextLink";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
-    const {data, error} = useSWR(`/api/children?user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api/children?skiptoken=&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
 
     if (!data) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
@@ -57,7 +58,7 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                     </thead>
 
                     <tbody>
-                    {data.map(({name, size, id, folder, image, video}: itemType, index: number) => {
+                    {data.value.map(({name, size, id, folder, image, video}: itemType, index: number) => {
                         return (
                             folder
                                 ?
@@ -66,6 +67,9 @@ export default function ItemList({user, route}: { user: string, route?: string[]
                                 <FileItem key={index} user={user} name={name} size={size} id={id} index={index}/>
                         )
                     })}
+                    {data['@odata.nextLink'] &&
+                        <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={1}/>
+                    }
                     </tbody>
                 </table>
             </div>

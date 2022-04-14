@@ -3,7 +3,7 @@ export type itemType = {
     name: string
     size: number
     folder: { childCount: number }
-    file: { mimeType: string, hashes: object }
+    file: { mimeType: string, hashes: { quickXorHash: string } }
     image: { height: number, width: number }
     video: { bitrate: number, height: number, width: number }
     createdDateTime: string

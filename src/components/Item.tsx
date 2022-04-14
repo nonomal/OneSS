@@ -36,7 +36,7 @@ export default function Item({user, id}: { user: string, id: string }) {
         </div>
     )
 
-    const {name, size, createdDateTime, lastModifiedDateTime, thumbnails}: itemType = data
+    const {name, size, file, createdDateTime, lastModifiedDateTime, thumbnails}: itemType = data
 
     return (
         <div className="hero min-h-screen bg-base-200 overflow-x-auto">
@@ -49,6 +49,8 @@ export default function Item({user, id}: { user: string, id: string }) {
                     <div className="text-xl">{createdDateTime}</div>
                     <div className="text-2xl font-bold">Last Modified Date Time</div>
                     <div className="text-xl">{lastModifiedDateTime}</div>
+                    <div className="text-2xl font-bold">Quick Xor Hash</div>
+                    <div className="text-xl">{file.hashes.quickXorHash}</div>
 
                     <div className={"btn-group inline"}>
                         <button className={'btn'}>
