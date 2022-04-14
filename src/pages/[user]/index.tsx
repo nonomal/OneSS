@@ -11,7 +11,7 @@ export default function UserIndex() {
 
     return (
         <>
-            <Menu userName={userList.nickname[userName] || userName}/>
+            <Menu userName={userName}/>
 
             <div className={'flex justify-center mb-14'}>
                 <ItemList user={user as string}/>
