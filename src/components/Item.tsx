@@ -49,8 +49,10 @@ export default function Item({user, id}: { user: string, id: string }) {
                     <div className="text-xl">{createdDateTime}</div>
                     <div className="text-2xl font-bold">Last Modified Date Time</div>
                     <div className="text-xl">{lastModifiedDateTime}</div>
-                    <div className="text-2xl font-bold">Quick Xor Hash</div>
-                    <div className="text-xl">{file.hashes.quickXorHash}</div>
+                    {file.hashes && <>
+                        <div className="text-2xl font-bold">Quick Xor Hash</div>
+                        <div className="text-xl">{file.hashes.quickXorHash}</div>
+                    </>}
 
                     <div className={"btn-group inline"}>
                         <button className={'btn'}>
