@@ -8,6 +8,8 @@
 
 - 免费! | Free !
 - API Support
+- 200文件以上支持 | 200 files or more support
+- 私有文件夹 | Private Folder
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
 - 可以做图床，视频云 | Cloud Storage Services for Photos and Video [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
