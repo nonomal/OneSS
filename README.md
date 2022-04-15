@@ -20,7 +20,11 @@
 
 - 使用 | How to use
 
-  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹 | Create a folder named OneSS in the root directory of your OneDrive
+  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 **公开** 文件夹 | Create a folder named OneSS as a **public** folder in the root directory of your OneDrive
+
+  在自己 OneDrive 的根目录建立名为 OneSSP 的文件夹作为 **私有** 文件夹 | Create a folder named OneSSP as a **private** folder in the root directory of your OneDrive
+
+  可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
 - 自定义设置 |
 

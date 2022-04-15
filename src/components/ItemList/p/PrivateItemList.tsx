@@ -7,6 +7,7 @@ import FileItem from "@/components/ItemList/FileItem";
 import ListLoading from "@/components/ItemList/ListLoading";
 import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
 import PrivateListHeader from "@/components/ItemList/p/PrivateListHeader";
+import PrivateNextLink from "@/components/ItemList/p/PrivateNextLink";
 
 
 export default function PrivateItemList({user, route}: { user: string, route?: string[] }) {
@@ -55,7 +56,7 @@ export default function PrivateItemList({user, route}: { user: string, route?: s
                     </thead>
 
                     <tbody>
-                    {data.map(({name, size, id, folder, image, video}: itemType, index: number) => {
+                    {data.value.map(({name, size, id, folder, image, video}: itemType, index: number) => {
                         return (
                             folder
                                 ?
@@ -64,6 +65,9 @@ export default function PrivateItemList({user, route}: { user: string, route?: s
                                 <FileItem key={index} user={user} name={name} size={size} id={id} index={index}/>
                         )
                     })}
+                    {data['@odata.nextLink'] &&
+                        <PrivateNextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={1}/>
+                    }
                     </tbody>
                 </table>
             </div>

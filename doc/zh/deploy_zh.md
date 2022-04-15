@@ -21,8 +21,12 @@
     1. 在[vercel](https://vercel.com/new) 注册登录选择新项目。导入自己的 OneSS 库。
     2. 在环境变量处填入之前获取的 CLIENT_ID，TENANT_ID，CLIENT_SECRET
        ![6](/doc/deploy/6.png)
-    3. 部署
-    4. 自定义域名 (可选)
+    3. 加入环境变量
+        - NEXTAUTH_URL: 值为部署域名，例`https://oness.dzaaaaaa.com`
+        - NEXTAUTH_SECRET: 加密用，建议设为随机生成密码，如用指令`openssl rand -base64 32`生成
+        - PRIVATE_TOKEN: 登录用密码，自己设置
+    4. 部署
+    5. 自定义域名 (可选)
 
         - 在 Settings>Domains 添加自己的域名
         - 注意:

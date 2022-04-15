@@ -6,7 +6,7 @@ import baseSetting from "@/setting/baseSetting";
 
 
 const children = async (req: NextApiRequest, res: NextApiResponse) => {
-    const {user, route, skiptoken} = req.query
+    const {user, route, skiptoken = ''} = req.query
     const data = await getChildrenByRoute(user as string, route ? `/${route}` : '', skiptoken as string)
     res.status(200).json(data)
 }

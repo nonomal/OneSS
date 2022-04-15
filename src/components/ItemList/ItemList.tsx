@@ -12,7 +12,7 @@ import NextLink from "@/components/ItemList/NextLink";
 
 
 export default function ItemList({user, route}: { user: string, route?: string[] }) {
-    const {data, error} = useSWR(`/api/children?skiptoken=&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api/children?user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
 
     if (!data) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>

@@ -10,8 +10,8 @@ import customSetting from "@/setting/customSetting";
 const children = async (req: NextApiRequest, res: NextApiResponse) => {
     const session = await getSession({req})
     if (session?.user?.name === customSetting.siteName && session?.user?.email === customSetting.link.email) {
-        const {user, route} = req.query
-        const data = await getChildrenByRoute(user as string, route ? `/${route}` : '')
+        const {user, route, skiptoken = ''} = req.query
+        const data = await getChildrenByRoute(user as string, route ? `/${route}` : '', skiptoken as string)
         res.status(200).json(data)
     } else {
         res.status(200).json({status: 233})
@@ -19,7 +19,7 @@ const children = async (req: NextApiRequest, res: NextApiResponse) => {
 }
 export default children
 
-async function getChildrenByRoute(user: string, route: string = '') {
+async function getChildrenByRoute(user: string, route: string = '', skiptoken?: string) {
     const accessToken = await getToken()
     const url = encodeURI(`${baseSetting.endpoints.graph_endpoint}/users/${user}/drive/root:${baseSetting.private_folder}${route}:/children`)
 
@@ -29,11 +29,13 @@ async function getChildrenByRoute(user: string, route: string = '') {
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
+                top: 120,
                 expand: 'thumbnails',
                 select: 'name,size,id,folder,file,image,video',
+                skiptoken: `${skiptoken && skiptoken}`
             },
         })
-        return res.data.value
+        return res.data
     } catch (e) {
         return {status: 233}
     }
