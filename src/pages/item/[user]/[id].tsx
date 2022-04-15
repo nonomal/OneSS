@@ -11,7 +11,7 @@ export default function ItemUserId() {
 
     return (
         <>
-            <Menu userName={userList.nickname[userName] || userName}/>
+            <Menu userName={userName}/>
 
             <Item user={user as string} id={id as string}/>
         </>

@@ -23,7 +23,7 @@ async function getItemById(user: string, id: string) {
             },
             params: {
                 expand: 'thumbnails',
-                select: 'name,size,id,createdDateTime,lastModifiedDateTime'
+                select: 'name,size,id,file,createdDateTime,lastModifiedDateTime'
             },
         })
         return res.data

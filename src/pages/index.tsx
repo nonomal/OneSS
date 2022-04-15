@@ -7,6 +7,7 @@ import customSetting from "@/setting/customSetting";
 import userList from "@/setting/userList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import IndexLink from "@/components/IndexLink";
+import Auth from "@/components/Menu/Auth";
 
 
 export default function Home() {
@@ -47,11 +48,6 @@ export default function Home() {
                     </div>
                     <div className="flex-none">
                         <ThemeSwitch/>
-                        <a href={customSetting.link.github} target={'_blank'} rel="noreferrer">
-                            <button className={"btn btn-ghost"}>
-                                <VscGithub className={"w-6 h-6"}/>
-                            </button>
-                        </a>
                     </div>
                 </div>
 

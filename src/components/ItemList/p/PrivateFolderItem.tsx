@@ -8,7 +8,7 @@ import convertB from "@/script/convert_bit";
 import CopyButton from "@/components/CopyModal/CopyButton";
 
 
-export default function FolderItem({user, route, name, size, index}: { user: string, route?: string[], name: string, size: number, index: number }) {
+export default function PrivateFolderItem({user, route, name, size, index}: { user: string, route?: string[], name: string, size: number, index: number }) {
     return (
         <tr key={index}>
 
@@ -20,8 +20,10 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)} width={32} height={32} layout={"fixed"} alt={name}/>
-                    <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)}
+                           width={32} height={32}
+                           layout={"fixed"} alt={name}/>
+                    <Link href={`/p/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <a className={'font-bold'}>{name}</a>
                     </Link>
                 </div>
@@ -29,7 +31,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
 
             {/*Size*/}
             <td className={'text-center'}>{convertB(size)}
-                <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
+                <link rel="preload" href={`/api/p/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
             </td>
 
             {/*Action*/}
@@ -40,7 +42,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
                     </button>
 
                     <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name}
-                                text={`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                                text={`https://${window.location.host}/p/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <VscLiveShare className={'w-6 h-6'}/>
                     </CopyButton>
 

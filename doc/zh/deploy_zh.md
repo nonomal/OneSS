@@ -1,6 +1,6 @@
 # 部署
 
-本文以开发者账户演示，其他账户只要能在 Azure 创建应用就行
+不支持 OneDrive 个人版, 也没有此支持计划(个人版自身很差劲
 
 1. 应用注册部分
     1. 登录[Azure 管理中心](http://aad.portal.azure.com)
@@ -21,8 +21,12 @@
     1. 在[vercel](https://vercel.com/new) 注册登录选择新项目。导入自己的 OneSS 库。
     2. 在环境变量处填入之前获取的 CLIENT_ID，TENANT_ID，CLIENT_SECRET
        ![6](/doc/deploy/6.png)
-    3. 部署
-    4. 自定义域名 (可选)
+    3. 加入环境变量
+        - NEXTAUTH_URL: 值为部署域名，例`https://oness.dzaaaaaa.com`
+        - NEXTAUTH_SECRET: 加密用，建议设为随机生成密码，如用指令`openssl rand -base64 32`生成
+        - PRIVATE_TOKEN: 登录用密码，自己设置
+    4. 部署
+    5. 自定义域名 (可选)
 
         - 在 Settings>Domains 添加自己的域名
         - 注意:
