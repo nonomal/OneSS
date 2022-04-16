@@ -1,13 +1,10 @@
 import Head from 'next/head'
 import Link from "next/link";
 
-import {VscGithub} from "react-icons/vsc";
-
 import customSetting from "@/setting/customSetting";
 import userList from "@/setting/userList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import IndexLink from "@/components/IndexLink";
-import Auth from "@/components/Menu/Auth";
 
 
 export default function Home() {

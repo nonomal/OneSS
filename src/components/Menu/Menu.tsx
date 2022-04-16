@@ -5,14 +5,13 @@ import {VscGistSecret, VscHome} from "react-icons/vsc";
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import Auth from "@/components/Menu/Auth";
-import userList from "@/setting/userList";
 
 
 export default function Menu({userName}: { userName: string }) {
     return (
         <div className="navbar bg-base-100">
             <div className={'flex-1'}>
-                <UserList userName={userList.nickname[userName]}/>
+                <UserList userName={userName}/>
             </div>
             <div className="flex-none">
                 <Link href={"/"}><a>
