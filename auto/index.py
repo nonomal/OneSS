@@ -22,7 +22,7 @@ async def s_i(user, route):
     if status == 233:
         return
 
-    for i in r:
+    for i in r['value']:
         try:
             i['folder']
         except:
