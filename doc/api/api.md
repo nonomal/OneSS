@@ -1,12 +1,13 @@
 # API
 
-```ts
-export type itemType = {
+<details markdown="1">
+<summary>itemType</summary>
+<pre><code>export type itemType = {
     id: string
     name: string
     size: number
     folder: { childCount: number }
-    file: { mimeType: string, hashes: object }
+    file: { mimeType: string, hashes: { quickXorHash: string } }
     image: { height: number, width: number }
     video: { bitrate: number, height: number, width: number }
     createdDateTime: string
@@ -19,7 +20,8 @@ export type itemType = {
     }
     content: string
 }
-```
+</code></pre>
+</details>
 
 # GET: you.domain.com/api/
 

@@ -16,7 +16,7 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
         return (
             <tr>
                 <th></th>
-                <div className={'btn btn-outline'} onClick={() => setNextLoading(false)}>Load Next Item</div>
+                <div className={'btn btn-outline w-full'} onClick={() => setNextLoading(false)}>Load More</div>
             </tr>
         )
     }
@@ -25,25 +25,17 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
     if (!data) return (
         <tr>
             <th></th>
-            <div className={'btn btn-outline loading'} onClick={() => setNextLoading(false)}>Loading...</div>
+            <div className={'btn btn-outline loading w-full'} onClick={() => setNextLoading(false)}>Loading...</div>
         </tr>
     )
 
     if (error || data.status == 233) return (
-        <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
-            <div className="hero">
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">233</h1>
-                        <p className="py-6 text-2xl">failed to load or not found.</p>
-                        <Link href={"/"}><a>
-                            <button className="btn btn-primary">Return Home</button>
-                        </a></Link>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <tr>
+            <th></th>
+            <div className={'btn btn-disabled w-full'} tabIndex={-1} role="button" aria-disabled="true">failed to load or not found.</div>
+        </tr>
     )
+
     return (
         <>
             {data.value.map(({name, size, id, folder, image, video}: itemType, index: number) => {
@@ -59,7 +51,5 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
                 <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={i + 1}/>
             }
         </>
-
     )
-
 }

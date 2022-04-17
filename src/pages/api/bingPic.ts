@@ -2,11 +2,11 @@ import axios from "axios";
 import {NextApiRequest, NextApiResponse} from "next";
 
 
-const bingPic = async (req: NextApiRequest, res: NextApiResponse) => {
+const apiBingPic = async (req: NextApiRequest, res: NextApiResponse) => {
     const url = await getBingPic()
     res.redirect(307, `https://www.bing.com${url}`)
 }
-export default bingPic
+export default apiBingPic
 
 async function getBingPic() {
     const idx = Math.floor(Math.random() * 8)

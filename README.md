@@ -1,4 +1,4 @@
-![OneSS_T](https://mystatic.dzaaaaaa.com/OneSS/OneSS_T.svg)
+![OneSS_T](https://mystatic.dzaaaaaa.com/OneSS/OneSS_T.svg "OneSS_T")
 
 # OneSS
 
@@ -34,14 +34,14 @@
 
 # [API](./doc/api/api.md)
 
-# [Use Github Actions](./auto/README.md)
+# [Use GitHub Actions](./auto/README.md)
 
 - 使用 Github Actions 定时构建任务，如索引等
 - 有助于提升活跃度, 但活跃度计算方式并不公开，所以不保证有效
 
 # Issues
 
-- 欢迎提建议与意见
+- 有问题欢迎在 Issues 里提出
 - 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
 - 莫名其妙的话会予以删除
 
@@ -63,9 +63,14 @@
 
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
 
+# 所用到的开源库
+
+[☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
+
 # 个人用快捷链接
 
 - [oness](https://oness.dzaaaaaa.com/)
 - [oness-dev](https://oness-dev.dzaaaaaa.com/)
 - [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
 - [SWR](https://swr.vercel.app/zh-CN/docs/getting-started)
+- [next-auth.js](https://next-auth.js.org/getting-started/example)
