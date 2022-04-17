@@ -1,16 +1,16 @@
 import axios from "axios";
-import {NextApiResponse} from "next";
+import {NextApiRequest, NextApiResponse} from "next";
 
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-const content = async (req: { query: { user: string, id: string } }, res: NextApiResponse) => {
-    const {'user': user, 'id': id} = req.query
-    const url = await getContent(user, id)
+const apiItemContent = async (req: NextApiRequest, res: NextApiResponse) => {
+    const {user, id} = req.query
+    const url = await getContent(user as string, id as string)
     res.redirect(307, url)
 }
-export default content
+export default apiItemContent
 
 async function getContent(user: string, id: string) {
     const accessToken = await getToken()

@@ -5,12 +5,12 @@ import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-const children = async (req: NextApiRequest, res: NextApiResponse) => {
+const apiChildren = async (req: NextApiRequest, res: NextApiResponse) => {
     const {user, route, skiptoken = ''} = req.query
     const data = await getChildrenByRoute(user as string, route ? `/${route}` : '', skiptoken as string)
     res.status(200).json(data)
 }
-export default children
+export default apiChildren
 
 async function getChildrenByRoute(user: string, route: string = '', skiptoken?: string) {
     const accessToken = await getToken()

@@ -1,17 +1,16 @@
 import axios from "axios";
-import type {NextApiResponse} from 'next'
+import {NextApiRequest, NextApiResponse} from "next";
 
-import {itemType} from "@/script/data_type";
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 
 
-const item = async (req: { query: { user: string, id: string } }, res: NextApiResponse<itemType[]>) => {
-    const {'user': user, 'id': id} = req.query
-    const data = await getItemById(user, id)
+const apiItem = async (req: NextApiRequest, res: NextApiResponse) => {
+    const {user, id} = req.query
+    const data = await getItemById(user as string, id as string)
     res.status(200).json(data)
 }
-export default item
+export default apiItem
 
 async function getItemById(user: string, id: string) {
     const accessToken = await getToken()
