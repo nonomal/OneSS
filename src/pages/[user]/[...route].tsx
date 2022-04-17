@@ -2,7 +2,6 @@ import {useRouter} from 'next/router'
 
 import ItemList from "@/components/ItemList/ItemList";
 import Menu from "@/components/Menu/Menu";
-import userList from "@/setting/userList";
 
 
 export default function UserRoute() {
