@@ -2,7 +2,7 @@
 
 - Response:
 
-  `total, used, remaining, deleted`
+  `total, used, state, remaining, deleted`
 
 - Example:
   ```json
