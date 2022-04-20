@@ -22,9 +22,9 @@
 
 - 使用 | How to use
 
-  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 **_公开_** 文件夹 | Create a folder named OneSS as a **_public_** folder in the root directory of your OneDrive
+  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 `公开` 文件夹 | Create a folder named OneSS as a `public` folder in the root directory of your OneDrive
 
-  在自己 OneDrive 的根目录建立名为 OneSSP 的文件夹作为 **_私有_** 文件夹 | Create a folder named OneSSP as a **_private_** folder in the root directory of your OneDrive
+  在自己 OneDrive 的根目录建立名为 OneSSP 的文件夹作为 `私有` 文件夹 | Create a folder named OneSSP as a `private` folder in the root directory of your OneDrive
 
   可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
@@ -41,9 +41,8 @@
 
 # Issues
 
-- 有问题欢迎在 Issues 里提出
+- 有问题,建议等欢迎在 Issues 里提出
 - 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
-- 莫名其妙的话会予以删除
 
 # Motivation
 
@@ -74,5 +73,3 @@
 - [oness](https://oness.dzaaaaaa.com/)
 - [oness-dev](https://oness-dev.dzaaaaaa.com/)
 - [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
-- [SWR](https://swr.vercel.app/zh-CN/docs/getting-started)
-- [next-auth.js](https://next-auth.js.org/getting-started/example)
