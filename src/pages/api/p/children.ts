@@ -1,6 +1,8 @@
 import axios from "axios";
 import {NextApiRequest, NextApiResponse} from 'next'
 import {getSession} from "next-auth/react"
+// @ts-ignore
+import SHA512 from "crypto-js/sha512";
 
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
@@ -9,7 +11,7 @@ import customSetting from "@/setting/customSetting";
 
 const apiPrivateChildren = async (req: NextApiRequest, res: NextApiResponse) => {
     const session = await getSession({req})
-    if (session?.user?.name === customSetting.siteName && session?.user?.email === customSetting.link.email) {
+    if (session?.user?.name === SHA512(`${customSetting.siteName}.${process.env.PRIVATE_TOKEN}.${customSetting.link.email}`).toString()) {
         const {user, route, skiptoken = ''} = req.query
         const data = await getPrivateChildrenByRoute(user as string, route ? `/${route}` : '', skiptoken as string)
         res.status(200).json(data)
