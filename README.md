@@ -12,7 +12,7 @@
 - 私有文件夹 | Private Folder
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 可以做图床，视频云 | Cloud Storage Services for Photos and Video [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
+- 文件托管 | File Hosting [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
 
 # 开始 | Start
 
