@@ -8,6 +8,7 @@ import ListLoading from "@/components/ItemList/ListLoading";
 import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
 import PrivateListHeader from "@/components/ItemList/p/PrivateListHeader";
 import PrivateNextLink from "@/components/ItemList/p/PrivateNextLink";
+import PrivateFileItem from "@/components/ItemList/p/PrivateFileItem";
 
 
 export default function PrivateItemList({user, route}: { user: string, route?: string[] }) {
@@ -62,7 +63,7 @@ export default function PrivateItemList({user, route}: { user: string, route?: s
                                 ?
                                 <PrivateFolderItem key={index} user={user} route={route} name={name} size={size} index={index}/>
                                 :
-                                <FileItem key={index} user={user} name={name} size={size} id={id} index={index}/>
+                                <PrivateFileItem key={index} user={user} name={name} size={size} id={id} index={index}/>
                         )
                     })}
                     {data['@odata.nextLink'] &&
