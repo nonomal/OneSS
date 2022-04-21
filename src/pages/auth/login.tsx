@@ -21,7 +21,7 @@ export default function Login({csrfToken}: { csrfToken: string }) {
                         <form className={"form-control"} method="post" action={"/api/auth/callback/credentials"}>
                             <input name="csrfToken" type="hidden" defaultValue={csrfToken}/>
                             <pre data-prefix=">"><code>Password?</code></pre>
-                            <pre data-prefix="$"><input name="password" type="password" className={'bg-neutral-focus'}/></pre>
+                            <pre data-prefix={error ? '!' : '$'} className={error && "text-warning"}><input name="password" type="password" className={'bg-neutral-focus'}/></pre>
                             <pre data-prefix=""><button className={'hover:bg-warning'} type="submit">Login...</button></pre>
                         </form>
                     </div>
