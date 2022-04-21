@@ -1,14 +1,13 @@
 import useSWR from "swr";
-import Link from "next/link";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
-import FileItem from "@/components/ItemList/FileItem";
 import ListLoading from "@/components/ItemList/ListLoading";
 import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
 import PrivateListHeader from "@/components/ItemList/p/PrivateListHeader";
 import PrivateNextLink from "@/components/ItemList/p/PrivateNextLink";
 import PrivateFileItem from "@/components/ItemList/p/PrivateFileItem";
+import NotFoundError from "@/components/NotFoundError";
 
 
 export default function PrivateItemList({user, route}: { user: string, route?: string[] }) {
@@ -24,17 +23,7 @@ export default function PrivateItemList({user, route}: { user: string, route?: s
     if (error || data.status == 233) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
             {user && <PrivateListHeader user={user} route={route}/>}
-            <div className="hero">
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">233</h1>
-                        <p className="py-6 text-2xl">failed to load or not found.</p>
-                        <Link href={"/"}><a>
-                            <button className="btn btn-primary">Return Home</button>
-                        </a></Link>
-                    </div>
-                </div>
-            </div>
+            <NotFoundError/>
         </div>
     )
 

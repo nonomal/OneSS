@@ -13,7 +13,9 @@ export default function ItemUserId() {
         <>
             <Menu userName={userName}/>
 
-            <Item user={user as string} id={id as string}/>
+            <div className={'flex justify-center'}>
+                <Item user={user as string} id={id as string}/>
+            </div>
         </>
     )
 }

@@ -1,11 +1,11 @@
 import useSWR from "swr";
-import Link from "next/link";
 import {useState} from "react";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
 import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
 import PrivateFileItem from "@/components/ItemList/p/PrivateFileItem";
+import NotFoundError from "@/components/NotFoundError";
 
 
 export default function PrivateNextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
@@ -31,17 +31,7 @@ export default function PrivateNextLink({user, route, skiptoken, i}: { user: str
 
     if (error || data.status == 233) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
-            <div className="hero">
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">233</h1>
-                        <p className="py-6 text-2xl">failed to load or not found.</p>
-                        <Link href={"/"}><a>
-                            <button className="btn btn-primary">Return Home</button>
-                        </a></Link>
-                    </div>
-                </div>
-            </div>
+            <NotFoundError/>
         </div>
     )
     return (
