@@ -1,9 +1,8 @@
 import NextAuth from "next-auth"
-// @ts-ignore
-import SHA512 from "crypto-js/sha512";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 import customSetting from "@/setting/customSetting";
+import {nameHmacSHA512} from "@/script/crypto";
 
 
 export default NextAuth({
@@ -16,7 +15,7 @@ export default NextAuth({
             async authorize(credentials, {body}) {
                 if (body && body.password === process.env.PRIVATE_TOKEN) {
                     return {
-                        name: SHA512(`${customSetting.siteName}.${process.env.PRIVATE_TOKEN}.${customSetting.link.email}`).toString(),
+                        name: nameHmacSHA512,
                         email: customSetting.link.email
                     }
                 } else {

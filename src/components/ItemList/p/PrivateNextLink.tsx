@@ -4,8 +4,8 @@ import {useState} from "react";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
-import FolderItem from "@/components/ItemList/FolderItem";
-import FileItem from "@/components/ItemList/FileItem";
+import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
+import PrivateFileItem from "@/components/ItemList/p/PrivateFileItem";
 
 
 export default function PrivateNextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
@@ -50,9 +50,9 @@ export default function PrivateNextLink({user, route, skiptoken, i}: { user: str
                 return (
                     folder
                         ?
-                        <FolderItem key={index + 120 * i} user={user} route={route} name={name} size={size} index={index + 120 * i}/>
+                        <PrivateFolderItem key={index + 120 * i} user={user} route={route} name={name} size={size} index={index + 120 * i}/>
                         :
-                        <FileItem key={index + 120 * i} user={user} name={name} size={size} id={id} index={index + 120 * i}/>
+                        <PrivateFileItem key={index + 120 * i} user={user} name={name} size={size} id={id} index={index + 120 * i}/>
                 )
             })}
             {data['@odata.nextLink'] &&
