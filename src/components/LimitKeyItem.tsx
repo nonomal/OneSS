@@ -6,7 +6,7 @@ import {fetcher} from "@/script/swr_get";
 import convertB from "@/script/convert_bit";
 import NotFoundError from "@/components/NotFoundError";
 
-export default function EncryptKeyItem({encryptKey}: { encryptKey: string }) {
+export default function LimitKeyItem({encryptKey}: { encryptKey: string }) {
     const {data, error} = useSWR(`/api/resolveKey?key=${encryptKey}`, fetcher)
 
     if (!data) return (
@@ -22,7 +22,7 @@ export default function EncryptKeyItem({encryptKey}: { encryptKey: string }) {
 
 
     return (
-        <div className={"w-full lg:max-w-7xl px-2 pb-14 flex flex-col"}>
+        <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>
             {data['thumbnails']["0"] && <div className={'w-full h-40 bg-cover bg-center rounded-xl'} style={{backgroundImage: `url(${data['thumbnails']["0"].large.url})`}}/>}
             <div className=" flex-col lg:flex-row">
                 <div className="overflow-x-auto">
@@ -30,7 +30,7 @@ export default function EncryptKeyItem({encryptKey}: { encryptKey: string }) {
                         <tbody>
                         <tr>
                             <td>Name</td>
-                            <td className={'text-2xl font-bold'}>{data['name']}</td>
+                            <td className={'text-2xl font-bold w-full'}>{data['name']}</td>
                         </tr>
                         <tr>
                             <td>Size</td>

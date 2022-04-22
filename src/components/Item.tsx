@@ -29,7 +29,7 @@ export default function Item({user, id}: { user: string, id: string }) {
     const {name, size, file, createdDateTime, lastModifiedDateTime, thumbnails}: itemType = data
 
     return (
-        <div className={"w-full lg:max-w-7xl px-2 pb-14 flex flex-col"}>
+        <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>
             {thumbnails["0"] && <div className={'w-full h-40 bg-cover bg-center rounded-xl'} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>}
             <div className=" flex-col lg:flex-row">
                 <div className="overflow-x-auto">
@@ -37,7 +37,7 @@ export default function Item({user, id}: { user: string, id: string }) {
                         <tbody>
                         <tr>
                             <td>Name</td>
-                            <td className={'text-2xl font-bold'}>{name}</td>
+                            <td className={'text-2xl font-bold w-full'}>{name}</td>
                         </tr>
                         <tr>
                             <td>Size</td>
@@ -77,9 +77,9 @@ export default function Item({user, id}: { user: string, id: string }) {
                                 </div>
                             </td>
                         </tr>
+                        <LimitKey user={user} id={id}/>
                         </tbody>
                     </table>
-                    { <LimitKey user={user} id={id}/>}
                 </div>
             </div>
         </div>

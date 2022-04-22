@@ -50,7 +50,7 @@ export default function Home() {
                                 <VscKey className={"w-6 h-6"}/>
                             </button>
                         </a></Link>
-                        
+
                         <ThemeSwitch/>
                     </div>
                 </div>

@@ -1,17 +1,17 @@
 import {useRouter} from "next/router";
 
 import Menu from "@/components/Menu/Menu";
-import EncryptKeyItem from "@/components/EncryptKeyItem";
+import LimitKeyItem from "@/components/LimitKeyItem";
 
 
 export default function EncryptKey() {
     const {encryptKey} = useRouter().query
     return (
         <>
-            <Menu userName={'EncryptKeyItem'}/>
+            <Menu userName={'Limit Key Item'}/>
 
             <div className={'flex justify-center'}>
-                <EncryptKeyItem encryptKey={encodeURIComponent(encryptKey as string)}/>
+                <LimitKeyItem encryptKey={encodeURIComponent(encryptKey as string)}/>
             </div>
         </>
     )
