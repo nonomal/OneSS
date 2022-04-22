@@ -1,5 +1,4 @@
 import useSWR from "swr";
-import Link from "next/link";
 import {useState} from "react";
 
 import {fetcher} from "@/script/swr_get";
