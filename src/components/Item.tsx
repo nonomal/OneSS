@@ -8,6 +8,7 @@ import {itemType} from "@/script/data_type";
 import convertB from "@/script/convert_bit";
 import CopyButton from "@/components/CopyModal/CopyButton";
 import NotFoundError from "@/components/NotFoundError";
+import LimitKey from "@/components/LimitKey";
 
 
 export default function Item({user, id}: { user: string, id: string }) {
@@ -78,6 +79,7 @@ export default function Item({user, id}: { user: string, id: string }) {
                         </tr>
                         </tbody>
                     </table>
+                    { <LimitKey user={user} id={id}/>}
                 </div>
             </div>
         </div>
