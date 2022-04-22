@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import {VscGistSecret, VscHome} from "react-icons/vsc";
+import {VscGistSecret, VscHome, VscKey} from "react-icons/vsc";
 
 import UserList from "@/components/Menu/UserList";
 import ThemeSwitch from "@/components/ThemeSwitch";
@@ -17,6 +17,12 @@ export default function Menu({userName}: { userName: string }) {
                 <Link href={"/"}><a>
                     <button className={'btn btn-ghost'}>
                         <VscHome className={"w-6 h-6"}/>
+                    </button>
+                </a></Link>
+
+                <Link href={"/key"}><a>
+                    <button className={'btn btn-ghost'}>
+                        <VscKey className={"w-6 h-6"}/>
                     </button>
                 </a></Link>
 
