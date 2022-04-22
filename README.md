@@ -7,9 +7,11 @@
 # 特性 | Features
 
 - 免费! | Free !
+- 部署方便 | Easy to deploy
 - API Support
 - 200文件以上支持 | 200 files or more support
 - 私有文件夹 | Private Folder
+- 限时链接生成 | Limited Link Generation
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
 - 文件托管 | File Hosting [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
