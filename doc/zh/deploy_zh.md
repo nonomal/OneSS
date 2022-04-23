@@ -34,5 +34,3 @@
           若使用 cloudflare，官方不建议使用代理功能，具体见[官方链接](https://vercel.com/support/articles/using-cloudflare-with-vercel?query=cloudf)
 
 4. 成功后及可访问
-
-若根据 Readme 无法成功部署，可参考[视频流程](https://www.bilibili.com/video/BV1SZ4y1d73v/)
