@@ -20,7 +20,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)} width={32} height={32} layout={"fixed"} alt={name}/>
+                    <Image src={'https://mystatic.dza.vin/VscIcons/' + getIconForFolder(name)} width={32} height={32} layout={"fixed"} alt={name}/>
                     <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <a className={'font-bold'}>{name}</a>
                     </Link>

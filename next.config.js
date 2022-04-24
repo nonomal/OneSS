@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['mystatic.dzaaaaaa.com'],
+        domains: ['mystatic.dza.vin'],
     },
     reactStrictMode: true,
 }

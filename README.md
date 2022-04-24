@@ -1,4 +1,4 @@
-![OneSS_T](https://mystatic.dzaaaaaa.com/OneSS/OneSS_T.svg "OneSS_T")
+![OneSS_T](https://mystatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
 # OneSS
 
@@ -14,7 +14,7 @@
 - 限时链接生成 | Limited-time Link Generation
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 文件托管 | File Hosting [(demo)](https://mystatic.dzaaaaaa.com/OneSS.html)
+- 文件托管 | File Hosting [(demo)](https://mystatic.dza.vin/OneSS.html)
 
 # 开始 | Start
 

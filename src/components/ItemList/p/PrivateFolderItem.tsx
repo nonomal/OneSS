@@ -20,7 +20,7 @@ export default function PrivateFolderItem({user, route, name, size, index}: { us
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dzaaaaaa.com/VscIcons/' + getIconForFolder(name)}
+                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dza.vin/VscIcons/' + getIconForFolder(name)}
                            width={32} height={32}
                            layout={"fixed"} alt={name}/>
                     <Link href={`/p/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
