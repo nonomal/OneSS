@@ -72,6 +72,6 @@
 
 # 个人用快捷链接
 
-- [oness](https://oness.dzaaaaaa.com/)
-- [oness-dev](https://oness-dev.dzaaaaaa.com/)
+- [oness](https://oss.dza.vin/)
+- [oness-dev](https://oss-dev.dza.vin/)
 - [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
