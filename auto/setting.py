@@ -1,4 +1,4 @@
-ONESS_DOMAIN = 'oness.dzaaaaaa.com'
+ONESS_DOMAIN = 'oss.dza.vin'
 
 
 class OneSSApi:
