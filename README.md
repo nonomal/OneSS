@@ -55,14 +55,11 @@
 
 - [OneSS应该做成什么样](https://www.dzaaaaaa.com/blog/LSW/OneSS应该做成什么样)
 
-# 所用到的开源库
-
-[☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
+# [☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
 
 # [如果你需要提升活跃度](./auto/README.md)
 
-- 使用 Github Actions 定时构建任务，如索引等
-- 有助于提升活跃度, 但活跃度计算方式并不公开，所以不保证有效
+有助于提升活跃度, 但活跃度计算方式并不公开，所以不保证有效
 
 # Licence
 
