@@ -30,7 +30,7 @@
 
   可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
-- 自定义设置 |
+- 自定义设置 | Custom Setting
 
   [中文](./doc/zh/customSetting_zh.md) | en
 
