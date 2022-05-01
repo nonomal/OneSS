@@ -14,7 +14,7 @@
 - 限时链接生成 | Limited-time Link Generation
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 文件托管 | File Hosting [(demo)](https://mystatic.dza.vin/OneSS.html)
+- 文件托管 | File Hosting [(demo](https://mystatic.dza.vin/OneSS.html) | [code)](https://github.com/Tualin14/MyStatic/blob/main/OneSS.html)
 
 # 开始 | Start
 
@@ -22,7 +22,7 @@
 
   [中文](./doc/zh/deploy_zh.md) | en
 
-- 使用 | How to use
+- 如何使用 | How to use
 
   在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 `公开` 文件夹 | Create a folder named OneSS as a `public` folder in the root directory of your OneDrive
 
@@ -30,6 +30,7 @@
 
   可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
+  [中文](./doc/zh/use_zh.md) | en
 - 自定义设置 | Custom Setting
 
   [中文](./doc/zh/customSetting_zh.md) | en
