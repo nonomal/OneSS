@@ -8,7 +8,7 @@ import EncUtf8 from "crypto-js/enc-utf8";
 import customSetting from "@/setting/customSetting";
 
 
-export const nameHmacSHA512 = HmacSHA512(`${customSetting.siteName}.${customSetting.link.email}`, process.env.PRIVATE_TOKEN).toString()
+export const nameHmacSHA512 = HmacSHA512(`${customSetting.siteName}.${customSetting.email}`, process.env.PRIVATE_TOKEN).toString()
 
 export function encrypt(message: string, secret: string) {
     return TripleDES.encrypt(message, secret).toString()
