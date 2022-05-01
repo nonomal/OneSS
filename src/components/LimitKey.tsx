@@ -12,7 +12,7 @@ import CopyButton from "@/components/CopyModal/CopyButton";
 export default function LimitKey({user, id}: { user: string, id: string }) {
     const [limitTime, setLimitTime] = useState(0);
     const {data: session} = useSession()
-    if (session?.user?.email === customSetting.link.email) {
+    if (session?.user?.email === customSetting.email) {
         return (
             <tr>
                 <td>Limit Key(day)</td>

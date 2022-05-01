@@ -7,7 +7,7 @@ import customSetting from "@/setting/customSetting";
 
 export default function Auth() {
     const {data: session} = useSession()
-    if (session?.user?.email === customSetting.link.email) {
+    if (session?.user?.email === customSetting.email) {
         return (
             <button className={'btn btn-ghost'} onClick={() => signOut()}>
                 <VscUnlock className={"w-6 h-6"}/>

@@ -16,7 +16,7 @@ export default NextAuth({
                 if (body && body.password === process.env.PRIVATE_TOKEN) {
                     return {
                         name: nameHmacSHA512,
-                        email: customSetting.link.email
+                        email: customSetting.email
                     }
                 } else {
                     return null
