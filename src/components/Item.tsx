@@ -30,7 +30,20 @@ export default function Item({user, id}: { user: string, id: string }) {
 
     return (
         <div className={"w-full lg:max-w-7xl px-2 flex flex-col"}>
-            {thumbnails["0"] && <div className={'w-full h-40 bg-cover bg-center rounded-xl'} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>}
+            {thumbnails["0"] &&
+                <>
+                    <label htmlFor="item-modal">
+                        <div className={'w-full h-40 bg-cover bg-center rounded-xl'} style={{backgroundImage: `url(${thumbnails["0"].large.url})`}}/>
+                    </label>
+
+                    <input type="checkbox" id="item-modal" className="modal-toggle"/>
+                    <div className="modal">
+                        <label htmlFor="item-modal">
+                            <img className={'rounded-lg shadow-2xl'} src={thumbnails["0"].large.url}/>
+                        </label>
+                    </div>
+                </>
+            }
             <div className=" flex-col lg:flex-row">
                 <div className="overflow-x-auto">
                     <table className="table table-zebra w-full">
