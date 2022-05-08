@@ -9,7 +9,7 @@
 - 免费! | Free !
 - 部署方便 | Easy to deploy
 - API Support
-- 200文件以上支持 | 200 files or more support
+- 200 文件以上支持 | 200 files or more support
 - 私有文件夹 | Private Folder
 - 限时链接生成 | Limited-time Link Generation
 - 多用户支持 | Multi-user Support
@@ -31,6 +31,7 @@
   可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
   [中文](./doc/zh/use_zh.md) | en
+
 - 自定义设置 | Custom Setting
 
   [中文](./doc/zh/customSetting_zh.md) | en
@@ -41,20 +42,6 @@
 
 - 有问题,建议等欢迎在 Issues 里提出
 - 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
-
-# Motivation
-
-- 目标是让 OneSS 更像 OSS 一样的使用！
-
-- 情景假设 | Scenario Analysis
-
-    - 个人博客需要插入图片，音频或者视频，但是无法负担昂贵的存储费用，或者一些云存储服务并不理想。需要一个方便上传，调用的空间。
-
-    - 一个作者，把完成的合法，优秀的作品传到适当网站，但因为莫须有的原因(平台间竞争，原作者被盗窃者举报......)被审核删除，那么就需要一个更好地分享位置，一个不用看别人脸色的地方。
-
-- 我认为，当我们都可以自己储存并共享自己的文件的时候，我们可以更方便的建立我们自己的平台。
-
-- [OneSS应该做成什么样](https://www.dzaaaaaa.com/blog/LSW/OneSS应该做成什么样)
 
 # [☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
 
@@ -73,3 +60,4 @@
 - [oness](https://oss.dza.vin/)
 - [oness-dev](https://oss-dev.dza.vin/)
 - [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
+- [OneSS 应该做成什么样](https://www.dzaaaaaa.com/blog/LSW/OneSS应该做成什么样)
