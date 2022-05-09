@@ -3,13 +3,14 @@ import {useState} from "react";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
-import FolderItem from "@/components/ItemList/FolderItem";
-import FileItem from "@/components/ItemList/FileItem";
+import FolderItem from "@/components/List/FolderItem";
+import FileItem from "@/components/List/FileItem";
+import customSetting from "@/setting/customSetting";
 
 
-export default function NextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
+export default function NextLink({user, route, skiptoken, i, p}: { user: string, route?: string[], skiptoken: string, i: number, p?: boolean }) {
     let [nextLoading, setNextLoading] = useState(true)
-    const {data, error} = useSWR(`/api/children?skiptoken=${skiptoken}&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?skiptoken=${skiptoken}&user=${user}&route=${route ? encodeURIComponent(route.join('/')) : ''}`, fetcher)
 
     if (nextLoading) {
         return (
@@ -19,7 +20,6 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
             </tr>
         )
     }
-
 
     if (!data) return (
         <tr>
@@ -41,13 +41,13 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
                 return (
                     folder
                         ?
-                        <FolderItem key={index + 120 * i} user={user} route={route} name={name} size={size} index={index + 120 * i}/>
+                        <FolderItem key={index + customSetting.top * i} user={user} route={route} name={name} size={size} index={index + customSetting.top * i} p={p}/>
                         :
-                        <FileItem key={index + 120 * i} user={user} name={name} size={size} id={id} index={index + 120 * i}/>
+                        <FileItem key={index + customSetting.top * i} user={user} name={name} size={size} id={id} index={index + customSetting.top * i}/>
                 )
             })}
             {data['@odata.nextLink'] &&
-                <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={i + 1}/>
+                <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={i + 1} p={p}/>
             }
         </>
     )

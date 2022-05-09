@@ -3,6 +3,7 @@ import type {NextApiRequest, NextApiResponse} from 'next'
 
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
+import customSetting from "@/setting/customSetting";
 
 
 const apiChildren = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -22,7 +23,7 @@ async function getChildrenByRoute(user: string, route: string = '', skiptoken?: 
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                top: 120,
+                top: customSetting.top,
                 expand: 'thumbnails',
                 select: 'name,size,id,folder,file,image,video',
                 skiptoken: `${skiptoken && skiptoken}`
