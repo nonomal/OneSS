@@ -1,6 +1,6 @@
 import {useRouter} from 'next/router'
 
-import ItemList from "@/components/ItemList/ItemList";
+import ItemList from "@/components/List/ItemList";
 import Menu from "@/components/Menu/Menu";
 
 

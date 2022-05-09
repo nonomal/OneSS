@@ -8,7 +8,7 @@ import convertB from "@/script/convert_bit";
 import CopyButton from "@/components/CopyModal/CopyButton";
 
 
-export default function FolderItem({user, route, name, size, index}: { user: string, route?: string[], name: string, size: number, index: number }) {
+export default function FolderItem({user, route, name, size, index, p}: { user: string, route?: string[], name: string, size: number, index: number, p?: boolean }) {
     return (
         <tr key={index}>
 
@@ -21,7 +21,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
             <td>
                 <div className="flex items-center gap-2">
                     <Image src={'https://mystatic.dza.vin/VscIcons/' + getIconForFolder(name)} width={32} height={32} layout={"fixed"} alt={name}/>
-                    <Link href={`/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                    <Link href={`${p ? '/p' : ''}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <a className={'font-bold'}>{name}</a>
                     </Link>
                 </div>
@@ -29,7 +29,7 @@ export default function FolderItem({user, route, name, size, index}: { user: str
 
             {/*Size*/}
             <td className={'text-center'}>{convertB(size)}
-                <link rel="preload" href={`/api/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
+                <link rel="preload" href={`/api${p ? '/p' : ''}/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
             </td>
 
             {/*Action*/}

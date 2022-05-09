@@ -1,8 +1,7 @@
 import {useRouter} from 'next/router'
 
 import Menu from "@/components/Menu/Menu";
-import userList from "@/setting/userList";
-import PrivateItemList from "@/components/ItemList/p/PrivateItemList";
+import ItemList from "@/components/List/ItemList";
 
 
 export default function UserIndex() {
@@ -14,7 +13,7 @@ export default function UserIndex() {
             <Menu userName={userName}/>
 
             <div className={'flex justify-center mb-14'}>
-                <PrivateItemList user={user as string}/>
+                <ItemList user={user as string} p={true}/>
             </div>
         </>
     )

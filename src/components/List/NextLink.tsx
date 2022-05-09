@@ -3,14 +3,14 @@ import {useState} from "react";
 
 import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
-import FolderItem from "@/components/ItemList/FolderItem";
-import FileItem from "@/components/ItemList/FileItem";
+import FolderItem from "@/components/List/FolderItem";
+import FileItem from "@/components/List/FileItem";
 import customSetting from "@/setting/customSetting";
 
 
-export default function NextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
+export default function NextLink({user, route, skiptoken, i, p}: { user: string, route?: string[], skiptoken: string, i: number, p?: boolean }) {
     let [nextLoading, setNextLoading] = useState(true)
-    const {data, error} = useSWR(`/api/children?skiptoken=${skiptoken}&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?skiptoken=${skiptoken}&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
 
     if (nextLoading) {
         return (
@@ -20,7 +20,6 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
             </tr>
         )
     }
-
 
     if (!data) return (
         <tr>
@@ -42,7 +41,7 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
                 return (
                     folder
                         ?
-                        <FolderItem key={index + customSetting.top * i} user={user} route={route} name={name} size={size} index={index + customSetting.top * i}/>
+                        <FolderItem key={index + customSetting.top * i} user={user} route={route} name={name} size={size} index={index + customSetting.top * i} p={p}/>
                         :
                         <FileItem key={index + customSetting.top * i} user={user} name={name} size={size} id={id} index={index + customSetting.top * i}/>
                 )

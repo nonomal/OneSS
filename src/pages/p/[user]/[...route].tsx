@@ -1,7 +1,7 @@
 import {useRouter} from 'next/router'
 
 import Menu from "@/components/Menu/Menu";
-import PrivateItemList from "@/components/ItemList/p/PrivateItemList";
+import ItemList from "@/components/List/ItemList";
 
 
 export default function UserRoute() {
@@ -13,7 +13,7 @@ export default function UserRoute() {
             <Menu userName={userName}/>
 
             <div className={'flex justify-center mb-14'}>
-                <PrivateItemList user={user as string} route={route as string[]}/>
+                <ItemList user={user as string} route={route as string[]} p={true}/>
             </div>
         </>
     )
