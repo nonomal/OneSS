@@ -29,7 +29,8 @@ export default function FolderItem({user, route, name, size, index, p}: { user: 
 
             {/*Size*/}
             <td className={'text-center'}>{convertB(size)}
-                <link rel="preload" href={`/api${p ? '/p' : ''}/children?user=${user}&route=${route ? route.join('/') + '/' : ''}${name}`} as="fetch" crossOrigin="anonymous"/>
+                <link rel="preload" href={`/api${p ? '/p' : ''}/children?user=${user}&route=${route ? encodeURIComponent(route.join('/')) + '/' : ''}${name}`} as="fetch"
+                      crossOrigin="anonymous"/>
             </td>
 
             {/*Action*/}

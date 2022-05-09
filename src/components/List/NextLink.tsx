@@ -10,7 +10,7 @@ import customSetting from "@/setting/customSetting";
 
 export default function NextLink({user, route, skiptoken, i, p}: { user: string, route?: string[], skiptoken: string, i: number, p?: boolean }) {
     let [nextLoading, setNextLoading] = useState(true)
-    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?skiptoken=${skiptoken}&user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?skiptoken=${skiptoken}&user=${user}&route=${route ? encodeURIComponent(route.join('/')) : ''}`, fetcher)
 
     if (nextLoading) {
         return (
@@ -47,7 +47,7 @@ export default function NextLink({user, route, skiptoken, i, p}: { user: string,
                 )
             })}
             {data['@odata.nextLink'] &&
-                <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={i + 1}/>
+                <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={i + 1} p={p}/>
             }
         </>
     )

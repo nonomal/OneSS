@@ -12,18 +12,18 @@ import NotFoundError from "@/components/NotFoundError";
 
 
 export default function ItemList({user, route, p}: { user: string, route?: string[], p?: boolean }) {
-    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?user=${user}&route=${route ? route.join('/') : ''}`, fetcher)
+    const {data, error} = useSWR(`/api${p ? '/p' : ''}/children?user=${user}&route=${route ? encodeURIComponent(route.join('/')) : ''}`, fetcher)
 
     if (!data) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
-            {user && <ListHeader user={user} route={route}/>}
+            {user && <ListHeader user={user} route={route} p={p}/>}
             <ListLoading/>
         </div>
     )
 
     if (error || data.status == 233) return (
         <div className={'w-full lg:max-w-7xl px-2 flex flex-col'}>
-            {user && <ListHeader user={user} route={route}/>}
+            {user && <ListHeader user={user} route={route} p={p}/>}
             <NotFoundError/>
         </div>
     )
@@ -58,7 +58,7 @@ export default function ItemList({user, route, p}: { user: string, route?: strin
                         )
                     })}
                     {data['@odata.nextLink'] &&
-                        <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={1}/>
+                        <NextLink user={user} route={route} skiptoken={data['@odata.nextLink'].split('&$skiptoken=')[1]} i={1} p={p}/>
                     }
                     </tbody>
                 </table>

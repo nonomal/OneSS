@@ -1,7 +1,7 @@
 const customSetting = {
     siteName: 'OneSS',
     email: 't@dzaaaaaa.com',
-    top: 140,
+    top: 100,
     index: {
         backgroundImage: '/api/bingPic',
         title: 'OneSS',
