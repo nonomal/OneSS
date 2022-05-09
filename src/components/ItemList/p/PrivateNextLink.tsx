@@ -6,6 +6,7 @@ import {itemType} from "@/script/data_type";
 import PrivateFolderItem from "@/components/ItemList/p/PrivateFolderItem";
 import PrivateFileItem from "@/components/ItemList/p/PrivateFileItem";
 import NotFoundError from "@/components/NotFoundError";
+import customSetting from "@/setting/customSetting";
 
 
 export default function PrivateNextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
@@ -40,9 +41,9 @@ export default function PrivateNextLink({user, route, skiptoken, i}: { user: str
                 return (
                     folder
                         ?
-                        <PrivateFolderItem key={index + 120 * i} user={user} route={route} name={name} size={size} index={index + 120 * i}/>
+                        <PrivateFolderItem key={index + customSetting.top * i} user={user} route={route} name={name} size={size} index={index + customSetting.top * i}/>
                         :
-                        <PrivateFileItem key={index + 120 * i} user={user} name={name} size={size} id={id} index={index + 120 * i}/>
+                        <PrivateFileItem key={index + customSetting.top * i} user={user} name={name} size={size} id={id} index={index + customSetting.top * i}/>
                 )
             })}
             {data['@odata.nextLink'] &&

@@ -5,6 +5,7 @@ import {fetcher} from "@/script/swr_get";
 import {itemType} from "@/script/data_type";
 import FolderItem from "@/components/ItemList/FolderItem";
 import FileItem from "@/components/ItemList/FileItem";
+import customSetting from "@/setting/customSetting";
 
 
 export default function NextLink({user, route, skiptoken, i}: { user: string, route?: string[], skiptoken: string, i: number }) {
@@ -41,9 +42,9 @@ export default function NextLink({user, route, skiptoken, i}: { user: string, ro
                 return (
                     folder
                         ?
-                        <FolderItem key={index + 120 * i} user={user} route={route} name={name} size={size} index={index + 120 * i}/>
+                        <FolderItem key={index + customSetting.top * i} user={user} route={route} name={name} size={size} index={index + customSetting.top * i}/>
                         :
-                        <FileItem key={index + 120 * i} user={user} name={name} size={size} id={id} index={index + 120 * i}/>
+                        <FileItem key={index + customSetting.top * i} user={user} name={name} size={size} id={id} index={index + customSetting.top * i}/>
                 )
             })}
             {data['@odata.nextLink'] &&

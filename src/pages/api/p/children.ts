@@ -5,6 +5,7 @@ import {getSession} from "next-auth/react"
 import getToken from "@/script/get_token";
 import baseSetting from "@/setting/baseSetting";
 import {nameHmacSHA512} from "@/script/crypto";
+import customSetting from "@/setting/customSetting";
 
 
 const apiPrivateChildren = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -29,7 +30,7 @@ async function getPrivateChildrenByRoute(user: string, route: string = '', skipt
                 'Authorization': `Bearer ${accessToken}`
             },
             params: {
-                top: 120,
+                top: customSetting.top,
                 expand: 'thumbnails',
                 select: 'name,size,id,folder,file,image,video',
                 skiptoken: `${skiptoken && skiptoken}`
