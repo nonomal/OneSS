@@ -1,7 +1,5 @@
 # 自定义设置
 
-## 目前在逐步添加可自定义的部分
-
 1. 网站图标
 
    替换 public/favicons 里的全部文件 [(favicons在线生成)](https://realfavicongenerator.net/)

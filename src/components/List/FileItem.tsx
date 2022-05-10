@@ -20,7 +20,7 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
             {/*Name*/}
             <td>
                 <div className="flex items-center gap-2">
-                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://mystatic.dza.vin/VscIcons/' + getIconForFile(name)}
+                    <Image className={'bg-oBlack dark:bg-oWhite bg-opacity-20 dark:bg-opacity-20 rounded'} src={'https://istatic.dza.vin/VscIcons/' + getIconForFile(name)}
                            width={32} height={32}
                            layout={"fixed"} alt={name}/>
                     <Link href={`/item/${user}/${id}`}>

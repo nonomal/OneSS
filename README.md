@@ -1,4 +1,4 @@
-![OneSS_T](https://mystatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
+![OneSS_T](https://istatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
 # OneSS
 
@@ -9,32 +9,25 @@
 - 免费! | Free !
 - 部署方便 | Easy to deploy
 - API Support
-- 200 文件以上支持 | 200 files or more support
+- 文件托管 | File Hosting [(demo](https://istatic.dza.vin/OneSS.html) | [code)](https://github.com/Tualin14/istatic/blob/main/OneSS.html)
 - 私有文件夹 | Private Folder
 - 限时链接生成 | Limited-time Link Generation
 - 多用户支持 | Multi-user Support
 - 多主题 | Multiple Themes
-- 文件托管 | File Hosting [(demo](https://mystatic.dza.vin/OneSS.html) | [code)](https://github.com/Tualin14/MyStatic/blob/main/OneSS.html)
 
 # 开始 | Start
 
-- 部署 | Deploy
+### [部署](./doc/zh/deploy_zh.md) | Deploy
 
-  [中文](./doc/zh/deploy_zh.md) | en
+### [如何使用](./doc/zh/use_zh.md) | Usage
 
-- 如何使用 | How to use
+在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 `公开` 文件夹 | Create a folder named OneSS as a `public` folder in the root directory of your OneDrive
 
-  在自己 OneDrive 的根目录建立名为 OneSS 的文件夹作为 `公开` 文件夹 | Create a folder named OneSS as a `public` folder in the root directory of your OneDrive
+在自己 OneDrive 的根目录建立名为 OneSSP 的文件夹作为 `私有` 文件夹 | Create a folder named OneSSP as a `private` folder in the root directory of your OneDrive
 
-  在自己 OneDrive 的根目录建立名为 OneSSP 的文件夹作为 `私有` 文件夹 | Create a folder named OneSSP as a `private` folder in the root directory of your OneDrive
+可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
 
-  可在 baseSetting 里修改文件夹名 | The folder name can be changed in the baseSetting
-
-  [中文](./doc/zh/use_zh.md) | en
-
-- 自定义设置 | Custom Setting
-
-  [中文](./doc/zh/customSetting_zh.md) | en
+### [自定义设置](./doc/zh/customSetting_zh.md) | Custom Setting
 
 # [API](./doc/api/api.md)
 

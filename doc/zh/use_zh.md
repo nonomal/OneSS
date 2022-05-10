@@ -5,7 +5,7 @@
 - userList
     - 用来切换用户
 
-  ![userList](https://mystatic.dza.vin/OneSS/use/userList.PNG)
+  ![userList](https://istatic.dza.vin/OneSS/use/userList.PNG)
 - meunIcons 从左至右图标依次是
     - 返回主页
     - 输入分享 key 获取文件
@@ -13,14 +13,14 @@
     - 登录/登出
     - 切换网站主题
 
-  ![meunIcons](https://mystatic.dza.vin/OneSS/use/meunIcons.PNG)
+  ![meunIcons](https://istatic.dza.vin/OneSS/use/meunIcons.PNG)
 - actionIcons 从左至右图标依次是
     - 预览文件
     - 分享文件链接，这个链接指向项目页
-    - 复制文件托管链接，可以直接放到需要的位置，博客，视频站等等 [(demo](https://mystatic.dza.vin/OneSS.html) | [code)](https://github.com/Tualin14/MyStatic/blob/main/OneSS.html),直接放入浏览器会下载文件
+    - 复制文件托管链接，可以直接放到需要的位置，博客，视频站等等 [(demo](https://istatic.dza.vin/OneSS.html) | [code)](https://github.com/Tualin14/istatic/blob/main/OneSS.html),直接放入浏览器会下载文件
     - 下载文件
 
-  ![actionIcons](https://mystatic.dza.vin/OneSS/use/actionIcons.PNG)
+  ![actionIcons](https://istatic.dza.vin/OneSS/use/actionIcons.PNG)
 
 ## Limit Key 生成 (需要登录)
 
@@ -30,4 +30,4 @@
 - 第一个图标为获取key，可以在获取文件页使用
 - 第二个图标为复制分享链接，访问此链接会直接转到文件页
 
-![key](https://mystatic.dza.vin/OneSS/use/key.PNG)
+![key](https://istatic.dza.vin/OneSS/use/key.PNG)
