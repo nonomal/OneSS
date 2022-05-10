@@ -36,17 +36,17 @@ export default function LimitKey({user, id}: { user: string, id: string }) {
 function GetEncryptKey({user, id, limit}: { user: string, id: string, limit: number }) {
     const {data, error} = useSWR(`/api/p/createKey?user=${user}&id=${id}&limit=${limit}`, fetcher)
 
-    if (!data) return <div>Loading...</div>
+    if (!data) return <div className={'btn'}>Loading...</div>
 
 
-    if (error || data.status == 233) return <div>Error...</div>
+    if (error || data.status == 233) return <div className={'btn'}>Error...</div>
 
     return (
         <>
             <CopyButton className={'btn'} name={'Limit Key'} text={data.key}>
                 <VscKey className={"w-6 h-6"}/>
             </CopyButton>
-            <CopyButton className={'btn'} name={'Limit Key Url'} text={`https://${window.location.host}/key/${data.key}`}>
+            <CopyButton className={'btn'} name={'Limit Key Url'} text={`${window.location.origin}/key/${data.key}`}>
                 <div>Url</div>
             </CopyButton>
         </>

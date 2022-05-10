@@ -1,7 +1,7 @@
 // @ts-ignore
 import HmacSHA512 from "crypto-js/hmac-sha512";
 // @ts-ignore
-import TripleDES from "crypto-js/tripledes";
+import Rabbit from "crypto-js/rabbit";
 // @ts-ignore
 import EncUtf8 from "crypto-js/enc-utf8";
 
@@ -11,9 +11,9 @@ import customSetting from "@/setting/customSetting";
 export const nameHmacSHA512 = HmacSHA512(`${customSetting.siteName}.${customSetting.email}`, process.env.PRIVATE_TOKEN).toString()
 
 export function encrypt(message: string, secret: string) {
-    return TripleDES.encrypt(message, secret).toString()
+    return Rabbit.encrypt(message, secret).toString()
 }
 
 export function decrypt(encrypted: string, secret: string) {
-    return TripleDES.decrypt(encrypted, secret).toString(EncUtf8)
+    return Rabbit.decrypt(encrypted, secret).toString(EncUtf8)
 }

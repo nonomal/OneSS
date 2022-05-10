@@ -41,7 +41,7 @@ export default function FolderItem({user, route, name, size, index, p}: { user: 
                     </button>
 
                     <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name}
-                                text={`https://${window.location.host}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
+                                text={`${window.location.origin}/${user}/${route ? route.join('/') + '/' : ''}${name}`}>
                         <VscLiveShare className={'w-6 h-6'}/>
                     </CopyButton>
 

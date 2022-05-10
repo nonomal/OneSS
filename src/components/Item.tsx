@@ -39,7 +39,7 @@ export default function Item({user, id}: { user: string, id: string }) {
                     <input type="checkbox" id="item-modal" className="modal-toggle"/>
                     <div className="modal">
                         <label htmlFor="item-modal">
-                            <img className={'rounded-lg shadow-2xl'} src={thumbnails["0"].large.url}/>
+                            <img className={'rounded-lg shadow-2xl text-4xl'} src={thumbnails["0"].large.url} alt={' no image available'}/>
                         </label>
                     </div>
                 </>
@@ -76,11 +76,11 @@ export default function Item({user, id}: { user: string, id: string }) {
                                         <Link href={`/api/preview?user=${user}&id=${id}`}><a target="_blank"><VscOpenPreview className={"w-6 h-6"}/></a></Link>
                                     </button>
 
-                                    <CopyButton className={'btn'} name={name} text={`https://${window.location.host}/item/${user}/${id}`}>
+                                    <CopyButton className={'btn'} name={name} text={`${window.location.origin}/item/${user}/${id}`}>
                                         <VscLiveShare className={'w-6 h-6'}/>
                                     </CopyButton>
 
-                                    <CopyButton className={'btn'} name={name} text={`https://${window.location.host}/api/item/content?user=${user}&id=${id}`}>
+                                    <CopyButton className={'btn'} name={name} text={`${window.location.origin}/api/item/content?user=${user}&id=${id}`}>
                                         <VscCopy className={"w-6 h-6"}/>
                                     </CopyButton>
 

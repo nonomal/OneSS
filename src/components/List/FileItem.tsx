@@ -39,11 +39,11 @@ export default function FileItem({user, name, size, id, index}: { user: string, 
                         <a href={`/api/preview?user=${user}&id=${id}`} target="_blank" rel="noreferrer"><VscOpenPreview className={"w-6 h-6"}/></a>
                     </button>
 
-                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`https://${window.location.host}/item/${user}/${id}`}>
+                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`${window.location.origin}/item/${user}/${id}`}>
                         <VscLiveShare className={'w-6 h-6'}/>
                     </CopyButton>
 
-                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`https://${window.location.host}/api/item/content?user=${user}&id=${id}`}>
+                    <CopyButton className={'btn btn-ghost btn-square btn-sm'} name={name} text={`${window.location.origin}/api/item/content?user=${user}&id=${id}`}>
                         <VscCopy className={"w-6 h-6"}/>
                     </CopyButton>
 
