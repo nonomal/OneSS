@@ -15,24 +15,24 @@ export default function Menu({userName}: { userName: string }) {
             </div>
             <div className="flex-none">
                 <Link href={"/"}><a>
-                    <button className={'btn btn-ghost'}>
+                    <button className={'btn btn-square btn-ghost'}>
                         <VscHome className={"w-6 h-6"}/>
                     </button>
                 </a></Link>
 
-                <Link href={"/key"}><a>
-                    <button className={'btn btn-ghost'}>
-                        <VscKey className={"w-6 h-6"}/>
-                    </button>
-                </a></Link>
-
                 <Link href={`/p/${userName}`}><a>
-                    <button className={'btn btn-ghost'}>
+                    <button className={'btn btn-square btn-ghost'}>
                         <VscGistSecret className={"w-6 h-6"}/>
                     </button>
                 </a></Link>
 
                 <Auth/>
+
+                <Link href={"/key"}><a>
+                    <button className={'btn btn-square btn-ghost'}>
+                        <VscKey className={"w-6 h-6"}/>
+                    </button>
+                </a></Link>
 
                 <ThemeSwitch/>
             </div>
