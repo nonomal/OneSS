@@ -46,7 +46,7 @@ export default function Home() {
                     </div>
                     <div className="flex-none">
                         <Link href={"/key"}><a>
-                            <button className={'btn btn-ghost'}>
+                            <button className={'btn btn-square btn-ghost'}>
                                 <VscKey className={"w-6 h-6"}/>
                             </button>
                         </a></Link>

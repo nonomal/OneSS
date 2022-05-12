@@ -26,5 +26,6 @@ export default NextAuth({
     ],
     pages: {
         signIn: '/login',
+        error: '/500'
     }
 })

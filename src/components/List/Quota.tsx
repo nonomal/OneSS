@@ -42,7 +42,7 @@ export default function Quota({user}: { user: string }) {
         </div>
     )
 
-    if (error || data.status == 233) return <div className={"flex justify-center items-center text-2xl"}>failed to load or not found.</div>
+    if (error || data.status == 233) return <div className={"flex justify-center items-center text-2xl"}>error.</div>
 
     const {total, used, remaining, deleted} = data
 

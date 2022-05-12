@@ -31,7 +31,7 @@ export default function NextLink({user, route, skiptoken, i, p}: { user: string,
     if (error || data.status == 233) return (
         <tr>
             <th></th>
-            <div className={'btn btn-disabled w-full'} tabIndex={-1} role="button" aria-disabled="true">failed to load or not found.</div>
+            <div className={'btn btn-disabled w-full'} tabIndex={-1} role="button" aria-disabled="true">Item Not Found.</div>
         </tr>
     )
 
