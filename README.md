@@ -1,9 +1,10 @@
 ![OneSS_T](https://istatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
-# OneSS
+# OneSS(serverless)
 
-让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS(Object Storage Service)
+让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS
 
+临时解决OSS费用高的问题
 # 特性 | Features
 
 - 免费! | Free !
