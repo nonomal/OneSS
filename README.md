@@ -1,5 +1,7 @@
 ![OneSS_T](https://istatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
+# 发现官方提供一个[更好的方式](https://docs.microsoft.com/zh-cn/onedrive/developer/controls/file-pickers/?view=odsp-graph-online)
+
 # OneSS(serverless)
 
 让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS
