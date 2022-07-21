@@ -48,12 +48,3 @@
 # Licence
 
 [GPL-3.0](LICENSE) © [Tualin14](https://github.com/Tualin14)
-
----
-
-# 个人用快捷链接
-
-- [oness](https://oss.dza.vin/)
-- [oness-dev](https://oss-dev.dza.vin/)
-- [在 Microsoft Graph 中使用文件](https://docs.microsoft.com/zh-cn/graph/api/resources/onedrive?view=graph-rest-1.0)
-- [OneSS 应该做成什么样](https://www.dzaaaaaa.com/blog/LSW/OneSS应该做成什么样)
