@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     now = datetime.datetime.now()
 
-    with open('./public/time.txt', 'w') as f:
-        f.write(str(now))
+#     with open('./public/time.txt', 'w') as f:
+#         f.write(str(now))
 
     print(now)
