@@ -1,6 +1,7 @@
 ![OneSS_T](https://istatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
-# 发现官方提供一个[更好的方式](https://docs.microsoft.com/zh-cn/onedrive/developer/controls/file-pickers/?view=odsp-graph-online)
+# 大容量，免费，不错的网速，建议 [IPFS](https://ipfs.io/)
+# 一定要 OneDrive 的话,可以利用官方提供一个[更好的方式](https://docs.microsoft.com/zh-cn/onedrive/developer/controls/file-pickers/?view=odsp-graph-online)
 
 # OneSS(serverless)
 
@@ -34,10 +35,6 @@
 
 # [API](./doc/api/api.md)
 
-# Issues
-
-- 有问题,建议等欢迎在 Issues 里提出
-- 错误或者 Bug 之类的请详细描述，尽量有截图或者报错信息
 
 # [☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
 
