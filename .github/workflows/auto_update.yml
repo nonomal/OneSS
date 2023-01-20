@@ -24,15 +24,3 @@ jobs:
       - name: Update Index
         run: |
           python ./auto/run.py
-
-      - name: Commit
-        run: |
-          git config --global user.email t@dzaaaaaa.com
-          git config --global user.name Tualin14
-          git add .
-          git commit -m "Update Index" -a
-
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.ONESS }}
