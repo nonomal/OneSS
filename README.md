@@ -1,13 +1,11 @@
 ![OneSS_T](https://istatic.dza.vin/OneSS/OneSS_T.svg "OneSS_T")
 
-# 大容量，免费，不错的网速，建议 [IPFS](https://ipfs.io/)
-# 一定要 OneDrive 的话,可以利用官方提供一个[更好的方式](https://docs.microsoft.com/zh-cn/onedrive/developer/controls/file-pickers/?view=odsp-graph-online)
-
 # OneSS(serverless)
 
 让你的 Onedrive 能像 OSS 一样使用 | Make your Onedrive work like OSS
 
-临时解决OSS费用高的问题
+临时解决 OSS 费用高的问题
+
 # 特性 | Features
 
 - 免费! | Free !
@@ -35,8 +33,13 @@
 
 # [API](./doc/api/api.md)
 
+# Credits
 
-# [☁️ OneSS 用到的库](https://github.com/stars/Tualin14/lists/oness-%E7%94%A8%E5%88%B0%E7%9A%84%E5%BA%93)
+- [next.js](https://github.com/vercel/next.js)
+- [swr](https://github.com/vercel/swr)
+- [next-auth](https://github.com/nextauthjs/next-auth)
+- [daisyui](https://github.com/saadeghi/daisyui)
+- [crypto-js](https://github.com/brix/crypto-js)
 
 # [如果你需要提升活跃度](./auto/README.md)
 
